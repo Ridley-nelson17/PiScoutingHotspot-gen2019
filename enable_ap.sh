@@ -11,7 +11,7 @@ then
     echo "" > /etc/dhcpcd.conf
     echo "" > /etc/dnsmasq.conf
     
-    cat <<- 'EOF' > /etc/default/hostapd
+    cat << EOF > /etc/default/hostapd
       # Defaults for hostapd initscript
       #
       # See /usr/share/doc/hostapd/README.Debian for information about alternative
