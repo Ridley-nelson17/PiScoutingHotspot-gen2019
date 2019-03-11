@@ -11,7 +11,7 @@ then
     echo "" > /etc/dhcpcd.conf
     echo "" > /etc/dnsmasq.conf
     
-    cat <<EOT >> /etc/default/hostapd
+    cat <<EOF >> /etc/default/hostapd
       # Defaults for hostapd initscript
       #
       # See /usr/share/doc/hostapd/README.Debian for information about alternative
@@ -33,19 +33,19 @@ then
       #
       #DAEMON_OPTS=""
       DAEMON_CONF="/etc/hostapd/hostapd.conf"
-    EOT
+    EOF
     
-    cat <<EOT >> /etc/dhcpcd.conf
+    cat <<EOF >> /etc/dhcpcd.conf
       
-    EOT
+    EOF
     
-    cat <<EOT >> /etc/dnsmasq.conf
+    cat <<EOF >> /etc/dnsmasq.conf
       
-    EOT
+    EOF
     
-    cat <<EOT >> /etc/wpa_supplicant/wpa_supplicant.conf
+    cat <<EOF >> /etc/wpa_supplicant/wpa_supplicant.conf
       
-    EOT
+    EOF
 else
     
 fi
