@@ -37,15 +37,15 @@ then
     
     cat <<EOT >> /etc/dhcpcd.conf
       
-    EOF
+    EOT
     
     cat <<EOT >> /etc/dnsmasq.conf
       
-    EOF
+    EOT
     
     cat <<EOT >> /etc/wpa_supplicant/wpa_supplicant.conf
       
-    EOF
+    EOT
 else
     
 fi
