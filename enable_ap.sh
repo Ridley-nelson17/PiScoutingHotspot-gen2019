@@ -35,15 +35,15 @@ then
       DAEMON_CONF="/etc/hostapd/hostapd.conf"
     EOF
     
-    cat <<EOF >> /etc/dhcpcd.conf
+    cat <<EOF > /etc/dhcpcd.conf
       
     EOF
     
-    cat <<EOF >> /etc/dnsmasq.conf
+    cat <<EOF > /etc/dnsmasq.conf
       
     EOF
     
-    cat <<EOF >> /etc/wpa_supplicant/wpa_supplicant.conf
+    cat <<EOF > /etc/wpa_supplicant/wpa_supplicant.conf
       
     EOF
 else
