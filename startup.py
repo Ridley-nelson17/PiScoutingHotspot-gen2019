@@ -156,11 +156,11 @@ def signin():
         # User will not see this because they will be disconnected but we need to break here anyway
         return render_template('ap.html', message="Wrong password!")
 
-    with open('wpa.conf', 'w') as f:
+    with open('main/wpa.conf', 'w') as f:
         f.write(wpa_conf % (ssid, pwd))
-    with open('status.json', 'w') as f:
+    with open('main/status.json', 'w') as f:
         f.write(json.dumps({'status':'disconnected'}))
-    subprocess.Popen(["./disable_ap.sh"])
+    subprocess.Popen(["../disable_ap.sh"])
     piid = open('pi.id', 'r').read().strip()
     return render_template('index.html', message="Please wait 2 minutes to connect. Then your IP address will show up at <a href='https://snaptext.live/{}'>snaptext.live/{}</a>.".format(piid,piid))
 
@@ -177,18 +177,18 @@ if __name__ == "__main__":
     if not os.path.isfile('pi.id'):
         with open('pi.id', 'w') as f:
             f.write(id_generator())
-        subprocess.Popen("./expand_filesystem.sh")
+        subprocess.Popen("../expand_filesystem.sh")
         time.sleep(300)
     piid = open('pi.id', 'r').read().strip()
     print(piid)
     time.sleep(15)
     # get status
     s = {'status':'disconnected'}
-    if not os.path.isfile('status.json'):
-        with open('status.json', 'w') as f:
+    if not os.path.isfile('main/status.json'):
+        with open('main/status.json', 'w') as f:
             f.write(json.dumps(s))
     else:
-        s = json.load(open('status.json'))
+        s = json.load(open('main/status.json'))
 
     # check connection
     if wificonnected():
@@ -197,15 +197,15 @@ if __name__ == "__main__":
         if s['status'] == 'connected': # Don't change if status in status.json is hostapd
             s['status'] = 'disconnected'
 
-    with open('status.json', 'w') as f:
+    with open('main/status.json', 'w') as f:
         f.write(json.dumps(s))
     if s['status'] == 'disconnected':
         s['status'] = 'hostapd'
-        with open('status.json', 'w') as f:
+        with open('main/status.json', 'w') as f:
             f.write(json.dumps(s))
-        with open('wpa.conf', 'w') as f:
+        with open('main/wpa.conf', 'w') as f:
             f.write(wpa_conf_default)
-        subprocess.Popen("./enable_ap.sh")
+        subprocess.Popen("../enable_ap.sh")
     elif s['status'] == 'connected':
         piid = open('pi.id', 'r').read().strip()
 
@@ -218,7 +218,7 @@ if __name__ == "__main__":
         # alert user on snaptext
         r = requests.post("https://snaptext.live",data=json.dumps({"message":"Your Pi is online at {}".format(ipaddress),"to":piid,"from":"Raspberry Pi Turnkey"}))
         print(r.json())
-        subprocess.Popen("./startup.sh")
+        subprocess.Popen("../startup.sh")
         while True:
             time.sleep(60000)
     else:
