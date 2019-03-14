@@ -5,6 +5,6 @@ COPY ./config/Pipfile .
 COPY ./config/Pipfile.lock .
 RUN pipenv install --system
 EXPOSE 8080
-COPY ./
+COPY ../config
 WORKDIR /
 CMD ["python3", "startup.py"]
