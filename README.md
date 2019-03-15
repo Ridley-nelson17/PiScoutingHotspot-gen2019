@@ -16,11 +16,11 @@ Raspberry Pi alternative to minutebots4536 Scouting2019
   - **mac OS**
     - open **Terminal** and type `docker build -t 4536-<year>scouting-rpihotspot-gen`
 4. Using Terminal/Powershell/Command Prompt type the following `$ docker image`. You should see something along the lines of 
-  ```
-  REPOSITORY TAG    IMAGE ID     CREATED       VIRTUAL SIZE
-  4536-2019scouting-rpihotspot-gen    latest 3bc3545a1f64 3 minutes ago 8.31 MB
-  ```
-
+```
+REPOSITORY TAG    IMAGE ID     CREATED       VIRTUAL SIZE
+4536-2019scouting-rpihotspot-gen    latest 3bc3545a1f64 3 minutes ago 8.31 MB
+```
+This is the image that you just created. it should be in \images.
 5. Make the .zip archive
   - find the **.img** file that windows or mac produced and make it into a .zip archive
 6. flash it
