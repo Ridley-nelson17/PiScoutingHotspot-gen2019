@@ -7,8 +7,9 @@ Raspberry Pi alternative to minutebots4536 Scouting2019
 =================================================================================
 ## Usage
 1. Flash Raspbian on your Raspberry Pi
-  - You can use **Ubuntu on Windows 10** and type the command `$ sudo dd bs=4M if=2017-11-29-raspbian-stretch-lite.img of=/dev/mmcblk0 conv=fsync status=progress`
-
+  - **Windows** 
+    - install Docker desktop from [Docker.com](https://docker.com)
+    - You can use **Powershell on Windows 10** and type the command `$ docker build -t 4536-<year>scouting-rpihotspot-gen`
 2. 
 
 =================================================================================
