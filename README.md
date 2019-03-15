@@ -11,8 +11,11 @@ Raspberry Pi alternative to minutebots4536 Scouting2019
 3. Select the following depending on your device
   - **Windows**   
     - Use **Powershell on Windows 10** and type the command `$ docker build -t 4536-<year>scouting-rpihotspot-gen`
+      - note you will have to be in admin
   - **mac OS**
     - open **Terminal** and type `docker build -t 4536-<year>scouting-rpihotspot-gen`
-
+4. Make the .zip archive
+  - find the **.img** file that windows or mac produced and make it into a .zip archive
+5. flash it
 
 =================================================================================
