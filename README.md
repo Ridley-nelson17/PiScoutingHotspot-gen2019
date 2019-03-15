@@ -6,6 +6,7 @@ Raspberry Pi alternative to minutebots4536 Scouting2019
 
 =================================================================================
 ## Usage
+0. Go to the **FRC_4536_2019** branch if you are planning on using this at a competition
 1. Flash Raspbian on your Raspberry Pi
 2. install Docker desktop from [www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop)
 3. Select the following depending on your device
