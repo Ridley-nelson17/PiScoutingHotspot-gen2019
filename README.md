@@ -18,4 +18,6 @@ Raspberry Pi alternative to minutebots4536 Scouting2019
   - find the **.img** file that windows or mac produced and make it into a .zip archive
 5. flash it
 
+use https://pinout.xyz/pinout/adafruit_16x2_character_lcd
+
 =================================================================================
