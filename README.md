@@ -24,6 +24,6 @@ This is the image that you just created. it should be in \images.
 
 5. Make the .zip archive
   - find the **.img** file that windows or mac produced and make it into a .zip archive
-6. flash it
+6. Flash the **.zip** archive using BalenaEtcher
 
 =================================================================================
