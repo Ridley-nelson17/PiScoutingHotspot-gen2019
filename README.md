@@ -34,8 +34,9 @@ This is the image that you just created. it should be in \images.
 
 ## Building on Desktop (not recomended)
 1. Open python and type pip git https://github.com/Ridley-nelson17/PiScoutingHotspot-gen2019/FRC_4536_2019.git
-2. 
+2. Open startup.py and find the function 
+3. Type pip startup.py
 3.
-4
+4. 
 
 =================================================================================
