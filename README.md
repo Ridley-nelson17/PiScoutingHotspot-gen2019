@@ -6,6 +6,8 @@ Raspberry Pi alternative to minutebots4536 Scouting2019
 
 =================================================================================
 ## Usage
+
+### Typical Usage
 0. Clone the **FRC_4536_2019** branch if you are planning on using this at a competition
 1. Flash Raspbian on your Raspberry Pi
 2. install Docker desktop from [www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop)
@@ -28,10 +30,12 @@ This is the image that you just created. it should be in \images.
 
 =================================================================================
 
-hello
+=================================================================================
 
-###### =================================================================================
+## Building on Desktop (not recomended)
+1. Open python and type pip git https://github.com/Ridley-nelson17/PiScoutingHotspot-gen2019/FRC_4536_2019.git
+2. 
+3.
+4
 
-## Building on Desktop
-
-###### =================================================================================
+=================================================================================
