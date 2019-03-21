@@ -1,9 +1,9 @@
 FROM python:3.6-slim-stretch
 MAINTAINER Ridley Nelson <rnelson009@stpaul.k12.mn.us>
-COPY . /main /app
-COPY . /main/Pipfile .
+COPY ./main /app
+COPY ./main/Pipfile .
 
-WORKDIR /app
+WORKDIR ./app
 RUN pip3 install -r requirements.txt
 
 RUN pip install -U pip
