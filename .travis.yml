@@ -9,8 +9,8 @@ before_install:
   - docker --version
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker run --rm --privileged multiarch/qemu-user-static:register --reset
-  - docker build --build-arg DOCKER_ORGANIZATION=$DOCKER_ORGANIZATION --build-arg SWIG_IMAGE_TAG=$SWIG_IMAGE_TAG --build-arg CASADI_VERSION=$CASADI_VERSION -t rpi-debian-casadi .
-  - docker tag rpi-debian-casadi $DOCKER_ORGANIZATION/rpi-debian-casadi:$CASADI_VERSION
+  - docker build --build-arg ORGANIZATION=$ORGANIZATION --build-arg SIMAGE_NAME=$IMAGE_NAME --build-arg CASADI_VERSION=$CASADI_VERSION -t rpi-debian-casadi .
+  - docker tag rpi-debian-casadi $ORGANIZATION/rpi-debian-casadi:$CASADI_VERSION
 
 script:
-  - docker push $DOCKER_ORGANIZATION/rpi-debian-casadi:$CASADI_VERSION
+  - docker push $ORGANIZATION/rpi-debian-casadi:$CASADI_VERSION
