@@ -1,10 +1,10 @@
 # Get environment variables, default is the author's username
 # Need docker >= 17.0.5 in order to accept ARG before FROM
-ARG DOCKER_ORGANIZATION=doanminhdang
-ARG SWIG_IMAGE_TAG=latest
+ARG ORGANIZATION=ridley-nelson17
+ARG IMAGE_NAME=latest
 
 # Pull base image with swig precompiled
-FROM $DOCKER_ORGANIZATION/rpi-debian-swig:$SWIG_IMAGE_TAG
+FROM $ORGANIZATION/rpi-debian-swig:$IMAGE_NAME
 
 # Define working directory
 WORKDIR /home/pi
@@ -40,7 +40,7 @@ ENV PYTHONPATH="${PYTHONPATH}:/usr/local/lib:/usr/local/python"
 RUN python3 -c "import casadi"
 
 # Make port 22 available to the world outside this container
-EXPOSE 22
+EXPOSE 8080
 
 # Define default command
 CMD ["bash"]
