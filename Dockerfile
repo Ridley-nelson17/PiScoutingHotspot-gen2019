@@ -1,6 +1,6 @@
 FROM python:3.6-slim-stretch
 MAINTAINER Ridley Nelson <rnelson009@stpaul.k12.mn.us>
-COPY ./main ./app
+ADD ./main ./app
 COPY ./main/Pipfile .
 
 WORKDIR ./app
