@@ -1,12 +1,4 @@
-#tests
-
-ARG ORGANIZATION = Ridley-nelson17
-ARG IMAGE_NAME = PiScoutingHotspot-gen2019_1
-FROM $ORGANIZATION/rpi-debian-swig:$IMAGE_NAME
-
-#end tests
-
-#FROM python:3.6-slim-stretch
+FROM python:3.6-slim-stretch
 MAINTAINER Ridley Nelson <rnelson009@stpaul.k12.mn.us>
 ADD ./main ./app
 COPY ./main/Pipfile .
