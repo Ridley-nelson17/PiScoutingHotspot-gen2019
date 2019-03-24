@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y \
 RUN pip install -r requirements.txt
 
 # Set work directory to 'main'
-WORKDIR ./main
+WORKDIR ./app
 
 # Upgrading pip, not in use because of apt-get apt-update
 # pip install -U pip
