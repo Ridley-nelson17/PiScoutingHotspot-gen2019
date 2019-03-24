@@ -9,8 +9,8 @@ before_install:
   - docker --version
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker run --rm --privileged multiarch/qemu-user-static:register --reset
-  - docker build --build-arg ORGANIZATION=$ORGANIZATION --build-arg SIMAGE_NAME=$IMAGE_NAME --build-arg IMAGE_VERSION=$IMAGE_VERSION -t PiScoutingHotspot-gen2019 .
-  - docker tag PiScoutingHotspot-gen2019 $ORGANIZATION/PiScoutingHotspot-gen2019:$IMAGE_VERSION
+  - docker build --build-arg ORGANIZATION=$ORGANIZATION --build-arg IMAGE_NAME=$IMAGE_NAME --build-arg IMAGE_VERSION=$IMAGE_VERSION -t PiScoutingHotspot-gen2019 .
+  - docker tag PiScoutingHotspot-gen2019 $ORGANIZATION/$IMAGE_NAME:$IMAGE_VERSION
 
 script:
-  - docker push $ORGANIZATION/$IMAGE_NAME:$IMAGE_VERSION
+  - docker push $ORGANIZATION/PiScoutingHotspot-gen2019:$IMAGE_VERSION
