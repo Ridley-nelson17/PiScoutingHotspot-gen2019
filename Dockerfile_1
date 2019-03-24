@@ -1,7 +1,10 @@
 ARG ORGANIZATION=Ridley-nelson17
-ARG IMAGE_NAME=latest
+ARG IMAGE_NAME=PiScoutingHotspot-gen2019
+ARG IMAGE_BRANCH=master
 
-FROM python:3.6-slim-stretch
+FROM $ORGANIZATION/$IMAGE_BRANCH:$IMAGE_BRANCH
+# FROM python:3.6-slim-stretch
+
 MAINTAINER Ridley Nelson <rnelson009@stpaul.k12.mn.us>
 
 ADD ./main ./app
