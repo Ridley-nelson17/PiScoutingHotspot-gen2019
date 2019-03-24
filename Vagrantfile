@@ -11,5 +11,5 @@ Vagrant.configure("2") do |config|
     vb.memory = "4096"
   end
 
-  config.vm.provision "shell", path: "scripts/environment/provision.sh"
+  config.vm.provision "shell", path: "main/stage1/Docker_Installer.sh"
 end
