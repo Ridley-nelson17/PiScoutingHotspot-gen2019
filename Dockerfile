@@ -31,3 +31,5 @@ RUN pipenv install --system
 EXPOSE 8080
 
 CMD ["python3", "./startup.py"]
+
+VOLUME [ "/$IMAGE_NAME/work", "/$IMAGE_NAME/deploy"]
