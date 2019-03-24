@@ -1,3 +1,4 @@
+# Define some quick variables
 ARG ORGANIZATION=Ridley-nelson17
 ARG IMAGE_NAME=PiScoutingHotspot-gen2019
 ARG IMAGE_VERSION=master
