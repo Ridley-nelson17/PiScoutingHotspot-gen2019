@@ -1,11 +1,19 @@
 FROM python:3.6-slim-stretch
 MAINTAINER Ridley Nelson <rnelson009@stpaul.k12.mn.us>
+
 ADD ./main ./app
 COPY ./main/Pipfile .
 
-WORKDIR ./app
-RUN pip3 install -r requirements.txt
+# Main dependencies
+RUN apt-get update && apt-get install -y \
+  python-pip
+  
+RUN pip install -r requirements.txt
 
+# Set work directory to 'main'
+WORKDIR ./main
+
+# Upgrade pip
 RUN pip install -U pip
 RUN pip install pipenv
 RUN pipenv lock -r 
