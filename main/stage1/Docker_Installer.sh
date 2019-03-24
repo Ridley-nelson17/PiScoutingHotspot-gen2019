@@ -16,4 +16,4 @@ apt update
 apt install -y docker-ce
 
 # for Docker
-gpasswd -a vagrant docker
+gpasswd -a vagrant main/stage2
