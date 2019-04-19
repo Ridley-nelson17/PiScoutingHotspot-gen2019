@@ -221,6 +221,27 @@ sudo apt-get install iw
 
 sudo chmod +x /usr/bin/autohotspotN
 
+WPA_SWITCH='cat /utils/wpa_supplicant_helper.txt'
+WPA_True() {
+    cat <<EOF > /utils/wpa_supplicant_helper.txt
+        true
+    EOF
+}
+
+WPA_False() {
+    cat <<EOF > /utils/wpa_supplicant_helper.txt
+        false
+    EOF
+}
+
+if [ WPA_SWITCH == true ] then
+    WPA_False()
+elif [ WPA_SWITCH == false ] then
+    WPA_True()
+else
+    WPA_True()
+    echo '$WPA_SWITCH'
+fi
 
 
 cat <<EOF > /etc/wpa_supplicant/wpa_supplicant.conf
