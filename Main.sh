@@ -10,7 +10,33 @@ sudo apt-get install dnsmasq
 sudo systemctl disable hostapd
 sudo systemctl disable dnsmasq
 
-sudo nano /etc/hostapd/hostapd.conf
+/usr/bin/autohotspotN
 
-sudo nano ^O
-sudo nano ^X
+cat <<EOF > /etc/hostapd/hostapd.conf
+
+EOF
+
+cat <<EOF > /etc/default/hostapd
+
+EOF
+
+/etc/dnsmasq.conf
+
+step 2
+
+sudo cp /etc/network/interfaces /etc/network/interfaces-backup
+
+/etc/sysctl.conf
+
+/etc/dhcpcd.conf
+ nohook wpa_supplicant
+ 
+ /etc/systemd/system/autohotspot.service
+ 
+ sudo systemctl enable autohotspot.service
+
+sudo apt-get install iw
+
+
+
+sudo chmod +x /usr/bin/autohotspotN
