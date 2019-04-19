@@ -221,13 +221,15 @@ sudo apt-get install iw
 
 sudo chmod +x /usr/bin/autohotspotN
 
+
+
 cat <<EOF > /etc/wpa_supplicant/wpa_supplicant.conf
     ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
     update_config=1
     country=US
 
     network={
-	    ssid="CenturyLink6945"
+	ssid="CenturyLink6945"
         psk=""
         key_mgmt=WPA-PSK
     }
