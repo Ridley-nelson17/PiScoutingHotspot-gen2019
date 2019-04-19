@@ -9,3 +9,8 @@ sudo apt-get install dnsmasq
 
 sudo systemctl disable hostapd
 sudo systemctl disable dnsmasq
+
+sudo nano /etc/hostapd/hostapd.conf
+
+sudo nano ^O
+sudo nano ^X
