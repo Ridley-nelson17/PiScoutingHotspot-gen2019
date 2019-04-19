@@ -60,7 +60,13 @@ cat <<EOF > /etc/default/hostapd
 EOF
 
 cat <<EOF > /etc/dnsmasq.conf
-
+    #AutoHotspotN config
+    interface=wlan0
+    bind-dynamic
+    server=8.8.8.8
+    domain-needed
+    bogus-priv
+    dhcp-range=192.168.50.150,192.168.50.200,72h
 EOF
 
 # Stage 2
