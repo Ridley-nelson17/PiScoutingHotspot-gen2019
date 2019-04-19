@@ -224,11 +224,11 @@ sudo chmod +x /usr/bin/autohotspotN
 cat <<EOF > /etc/wpa_supplicant/wpa_supplicant.conf
     ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
     update_config=1
-    country=GB
+    country=US
 
     network={
-	    ssid="mySSID1off"
-        psk="myPassword"
+	    ssid="CenturyLink6945"
+        psk=""
         key_mgmt=WPA-PSK
     }
 EOF
